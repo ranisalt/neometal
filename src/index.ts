@@ -68,7 +68,6 @@ replaceText(document.body);
 
 // @see https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver.
 const observer = new MutationObserver((mutations) => {
-  console.log(regexes);
   mutations.forEach((mutation) => {
     // This DOM change was new nodes being added. Run our substitution
     // algorithm on each newly added node.
