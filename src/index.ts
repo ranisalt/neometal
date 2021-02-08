@@ -38,7 +38,10 @@ const replaceText = (node?: Node) => {
 
     // Skip textarea nodes due to the potential for accidental submission
     // of substituted words where none was intended.
-    if (node.parentNode?.nodeName === "TEXTAREA") {
+    if (
+      node.parentNode?.nodeName === "TEXTAREA" ||
+      (node.parentNode as HTMLElement | null)?.contentEditable
+    ) {
       return;
     }
 
