@@ -40,7 +40,7 @@ const replaceText = (node?: Node) => {
     // of substituted words where none was intended.
     if (
       node.parentNode?.nodeName === "TEXTAREA" ||
-      (node.parentNode as HTMLElement | null)?.contentEditable
+      (node.parentNode as HTMLElement | null)?.isContentEditable
     ) {
       return;
     }
